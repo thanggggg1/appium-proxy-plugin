@@ -10,7 +10,7 @@
     "prepublish": "npx tsc",
     "lint": "eslint '**/*.js' --fix",
     "prettier": "prettier '**/*.js' --write --single-quote",
-    "clear-cache": "rm -rf $HOME/.cache/appium-interceptor-plugin",
+    "clear-cache": "rm -rf $HOME/.cache/appium-proxy-tvr",
     "uninstall": "export APPIUM_HOME=/tmp/some-temp-dir && (appium plugin uninstall appium-interceptor || exit 0)",
     "install-plugin": "export APPIUM_HOME=/tmp/some-temp-dir && npm run build && appium plugin install --source=local $(pwd)",
     "reinstall-plugin": "export APPIUM_HOME=/tmp/some-temp-dir && (appium plugin uninstall appium-interceptor || exit 0) && npm run install-plugin",
@@ -23,9 +23,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/AppiumTestDistribution/appium-interceptor-plugin/issues"
+    "url": "https://github.com/AppiumTestDistribution/appium-proxy-tvr/issues"
   },
-  "homepage": "https://github.com/AppiumTestDistribution/appium-interceptor-plugin#readme",
+  "homepage": "https://github.com/AppiumTestDistribution/appium-proxy-tvr#readme",
   "license": "ISC",
   "peerDependencies": {
     "appium": "^2.4.1"

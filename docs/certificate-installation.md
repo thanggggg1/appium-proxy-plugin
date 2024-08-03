@@ -12,7 +12,7 @@ On the emulator, you can use the below command to install the certificate. You m
 2. Run below commands to download and install the certificate
     ```shell
     # This script does not work on Android 14 and real devices
-    curl -o $PWD/ca.pem https://raw.githubusercontent.com/AppiumTestDistribution/appium-interceptor-plugin/master/certificate/certs/ca.pem
+    curl -o $PWD/ca.pem https://raw.githubusercontent.com/AppiumTestDistribution/appium-proxy-tvr/master/certificate/certs/ca.pem
     file=$PWD/ca.pem
     filename=$(openssl x509 -noout -subject_hash_old -in $file)
     openssl x509 -in $file > $filename.0
@@ -31,7 +31,7 @@ On the emulator, you can use the below command to install the certificate. You m
 
 4. Ensure the installed certificate is displayed under the `System` section of the `Trusted Credentials` settings.
    
-   <img width="930" alt="image" src="https://github.com/AppiumTestDistribution/appium-interceptor-plugin/assets/6311526/51885560-be30-455e-9b42-2a829a8f5b8a">
+   <img width="930" alt="image" src="https://github.com/AppiumTestDistribution/appium-proxy-tvr/assets/6311526/51885560-be30-455e-9b42-2a829a8f5b8a">
 
 **NOTE:** If you save the emulator snapshot you don't need to add `-writable-system -wipe-data` when you start the emulator from the snapshot. `-writable-system -wipe-data` is required only once.
     

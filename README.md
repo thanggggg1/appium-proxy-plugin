@@ -1,4 +1,4 @@
-# appium-interceptor-plugin
+# appium-proxy-tvr
 
 This is an Appium plugin designed to intercept API response and mocking easy.
 This plugin uses mitmproxy
