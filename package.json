@@ -1,13 +1,12 @@
 {
-  "name": "appium-interceptor",
-  "version": "1.0.0-beta.10",
+  "name": "appium-proxy-tvr",
+  "version": "1.0.3",
   "description": "Appium 2.0 plugin to mock api calls for android apps",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "test": "mocha --require ts-node/register -p test/plugin.spec.js --exit --timeout 260000",
-    "prepublish": "npx tsc",
     "lint": "eslint '**/*.js' --fix",
     "prettier": "prettier '**/*.js' --write --single-quote",
     "clear-cache": "rm -rf $HOME/.cache/appium-proxy-tvr",
@@ -28,7 +27,7 @@
   "homepage": "https://github.com/AppiumTestDistribution/appium-proxy-tvr#readme",
   "license": "ISC",
   "peerDependencies": {
-    "appium": "^2.4.1"
+    "appium": "^2.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -101,6 +100,7 @@
     "axios": "^0.27.0",
     "better-ajv-errors": "^1.2.0",
     "enquirer": "^2.4.1",
+    "fs-extra": "^11.2.0",
     "get-port": "^5.1.1",
     "http-mitm-proxy": "^1.1.0",
     "ip": "^1.1.8",
@@ -110,7 +110,6 @@
     "parse-headers": "^2.0.5",
     "regex-parser": "^2.3.0",
     "uuid": "^9.0.1",
-    "yargs": "^17.7.2",
-    "fs-extra": "^11.2.0"
+    "yargs": "^17.7.2"
   }
 }
