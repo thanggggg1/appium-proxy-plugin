@@ -75,8 +75,13 @@ export class AppiumProxyPlugin extends BasePlugin {
       const realDevice = await isRealDevice(adb, deviceUDID);
       const proxy = await setupProxyServer(sessionId, deviceUDID, realDevice);
       await configureWifiProxy(adb, deviceUDID, realDevice, proxy);
+
+          // Attach the proxy to the driver instance
+      if (!driver.pluginData) {
+        driver.pluginData = {};
+      }
+      driver.pluginData.proxy = proxy;
       proxyCache.add(sessionId, proxy);
-      driver.sessions[sessionId].proxy = proxy;
     }
     return response;
   }
