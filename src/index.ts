@@ -1,5 +1,5 @@
-import { AppiumInterceptorPlugin } from './plugin';
-export default AppiumInterceptorPlugin;
-export { AppiumInterceptorPlugin };
+import { AppiumProxyPlugin } from './plugin';
+export default AppiumProxyPlugin;
+export { AppiumProxyPlugin };
 
 export { type MockConfig, type SniffConfig, type RequestInfo } from './types';

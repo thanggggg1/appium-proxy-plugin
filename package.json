@@ -18,16 +18,8 @@
   },
   "contributors": [
     {
-      "name": "Saikrishna",
-      "email": "saikrishna321@yahoo.com"
-    },
-    {
-      "name": "Srinivasan Sekar",
-      "email": "srinivasan.sekar1990@gmail.com"
-    },
-    {
-      "name": "Sudharsan Selvaraj",
-      "email": "sudharsanselvaraj.c0@gmail.com"
+      "name": "ThangLuong",
+      "email": "thanglq.work@gmail.com"
     }
   ],
   "bugs": {
@@ -68,8 +60,8 @@
     "webdriverio": "^8.27.0"
   },
   "appium": {
-    "pluginName": "appium-interceptor",
-    "mainClass": "AppiumInterceptorPlugin",
+    "pluginName": "appium-proxy-tvr",
+    "mainClass": "AppiumProxyPlugin",
     "schema": {
       "$schema": "http://json-schema.org/draft-07/schema",
       "additionalProperties": false,

@@ -9,7 +9,7 @@ import proxyCache from './proxy-cache';
 import logger from './logger';
 import log from './logger';
 
-export class AppiumInterceptorPlugin extends BasePlugin {
+export class AppiumProxyPlugin extends BasePlugin {
   static executeMethodMap = {
     'interceptor: addMock': {
       command: 'addMock',
