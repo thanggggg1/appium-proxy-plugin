@@ -76,6 +76,7 @@ export class AppiumProxyPlugin extends BasePlugin {
       const proxy = await setupProxyServer(sessionId, deviceUDID, realDevice);
       await configureWifiProxy(adb, deviceUDID, realDevice, proxy);
 
+      log.info(`Proxy server started for session ${sessionId} and ${proxy}`);
           // Attach the proxy to the driver instance
       if (!driver.pluginData) {
         driver.pluginData = {};
@@ -156,7 +157,7 @@ export class AppiumProxyPlugin extends BasePlugin {
       throw new Error('Proxy is not active for current session');
     }
 
-    log.info(`Adding listener with config ${config}`);
+    log.info(`Adding listener with config ${proxy} ${config}`);
     return proxy?.addSniffer(config);
   }
 
